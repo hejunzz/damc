@@ -111,13 +111,6 @@ if __name__ == '__main__':
     args.num_classes = len(args.classes)
     print('classes' + str(args.classes))
 
-
-    dsets_val = {x: datasets.ImageFolder(os.path.join(x), data_transforms_val[x]) for x in [source_path, target_path]}
-    dset_sizes = {x: len(dsets[x]) for x in [source_path, target_path]}
-    args.classes = dsets[source_path].classes
-    print('classes' + str(args.classes))
-    use_gpu = torch.cuda.is_available()
-
     if args.task == 'visda': # or args.task == 'office-home':
         src_train_len = int(len(dsets) * 0.9)
         src_val_len = len(dsets) - src_train_len
