@@ -27,7 +27,7 @@ def init_main():
                         help='the name of optimizer')
     parser.add_argument('--seed', type=int, default=2021, metavar='S',
                         help='random seed (default: 1)')
-    parser.add_argument('--log-interval', type=int, default=1, metavar='N',
+    parser.add_argument('--log-interval', type=int, default=50, metavar='N',
                         help='how many batches to wait before logging training status')
     parser.add_argument('--save', type=str, default='save/', metavar='B',
                         help='model check point dir')
@@ -35,7 +35,7 @@ def init_main():
                         help='which resnet 18,50,101,152,200')
     parser.add_argument('--num_c', type=int, metavar='A', default=12,
                         help='number of classifiers')
-    parser.add_argument('--max_sample', type=int, metavar='A', default=100,
+    parser.add_argument('--max_sample', type=int, metavar='A', default=-1,
                         help='sample size for debugging only, should be -1 to use the whole dataset')
     parser.add_argument('--tgt_max_epoch', type=int, default=30, metavar='E',
                         help='the epoch that computes pseudo label')
