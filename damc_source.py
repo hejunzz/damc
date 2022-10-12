@@ -46,9 +46,11 @@ def init_main():
     parser.add_argument('--pseudo_interval', type=int, default=2, metavar='N',
                         help='how many times to update pseudo labels')
     parser.add_argument('--pseudo_beta', type=float, default=0.01,
-                        help='trade-off of pseudo label loss')
+                        help='coefficient of pseudo label loss')
     parser.add_argument('--src_alpha', type=float, default=0.3,
                         help='coefficient of adversarial discrepancy loss')
+    parser.add_argument('--threshold', type=float, default=0.4,
+                        help='threshold of worst-case optimization')                        
     parser.add_argument('--bn_dim', type=int, metavar='A', default=256,
                         help='bottleneck dimension')
     parser.add_argument('--smoothing', type=int, metavar='A', default=0,
@@ -58,7 +60,8 @@ def init_main():
     parser.add_argument('--cls_middle', type=int, default=512,  # for visda, middle layer is 512
                         help='The middle layer of classifier')
     parser.add_argument('--num_layer', type=int, default=2, # for visda, we use 256->512->512->12 as one classifier
-                        help='The layers of classifier')                                                
+                        help='The layers of classifier')  
+
     val = 0
     args = parser.parse_args()
     args.cls_prob = 0.5

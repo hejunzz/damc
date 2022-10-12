@@ -44,13 +44,13 @@ def init_main():
     parser.add_argument('--p_start', type=int, default=2, metavar='N',
                         help='the epoch that begin using pseudo label')
     parser.add_argument('--pseudo_interval', type=int, default=2, metavar='N',
-                        help='how many times to update pseudo labels')
+                        help='the frequency of updating pseudo labels')
     parser.add_argument('--pseudo_beta', type=float, default=0.01,
-                        help='trade-off of pseudo label loss')
+                        help='coefficient of pseudo label loss')
     parser.add_argument('--src_alpha', type=float, default=0.3,
-                        help='used to load the src mode trained by source_alpha hyper-parameter')
+                        help='used to load the src mode trained by a particular src_alpha hyper-parameter')
     parser.add_argument('--tgt_alpha', type=float, default=0.1,
-                        help='trade-off of pair of trace loss')
+                        help='coefficient of pair of trace loss')
     parser.add_argument('--bn_dim', type=int, metavar='A', default=256,
                         help='bottleneck dimension')
     parser.add_argument('--smoothing', type=int, metavar='A', default=0,
