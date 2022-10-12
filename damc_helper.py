@@ -91,28 +91,17 @@ def plot_embedding(data, label, title, args):
     custom = [Line2D([],[],marker='o',linestyle='None'),
     Line2D([],[],marker='+',linestyle='None')]
 
-    # label_names = [args.classes[label[i]] for i in range(len(label))]
-    # legend_map = {i : args.classes[i] for i in range(len(args.classes))}
-    # {0: 'setosa',
-    #           1: 'versicolor',
-    #           2: 'virginica'}
-    # fig = plt.figure()
     fig=plt.figure(figsize=(12,8), dpi= 100, facecolor='w', edgecolor='k')
     plt.clf()
     sns.scatterplot(
         x=data[:, 0], y=data[:, 1],
-        # hue=label_names.map(legend_map),
         hue=label, 
-        # style=args.num_classes,
         palette=sns.color_palette("hls", args.num_classes),
         marker="o",
         s=80,
-        # style=label_s,
         legend="full",
         alpha=0.3
     )
-    # plt.legend(custom, args.classes) #,loc='lower right')
-    # plt.legend(custom,['Source','Target'],loc='lower right')
 
     plt.xticks([])
     plt.yticks([])

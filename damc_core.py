@@ -376,7 +376,7 @@ def damc_test(G, MC, epoch, testset_loader, args, max_sample=55388, target=True)
     #     writer.add_scalar('%s-%s: Acc class' % (args.source, args.target), np.mean(per_class_acc_list), epoch)
     #     writer.add_text('%s-%s: Per-class accuracy summary' % (args.source, args.target), msg, epoch)
 
-    return 100 * (float(correct_ens) / size)
+    return 100 * (float(correct_ens) / size), confusion_matrix.cpu().numpy()
 
 
 def damc_source_model_pretrain(G, MC, opt_s, src_loader, val_loader, args, writer=None):
@@ -609,6 +609,5 @@ def damc_target_model_adaptation(G, MC, opt_t, tgt_loader, pseudo_loader, testse
 
         # end of one epoch training
         # if args.task == 'visda':
-        damc_test(G=G, MC=MC, epoch=ep, testset_loader=testset_loader, args=args)
-        break
+        damc_test(G=G, MC=MC, epoch=ep, testset_loader=testset_loader, args=args)        
 
