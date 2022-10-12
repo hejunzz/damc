@@ -16,18 +16,18 @@ def init_main():
     parser.add_argument("--source", default='validation')  # train
     parser.add_argument("--target", default='validation')  # validation
     parser.add_argument('--batch-size', type=int, default=32, metavar='N',
-                        help='input batch size for training (default: 64)')
+                        help='input batch size for training')
     parser.add_argument('--test-batch-size', type=int, default=512, metavar='N',
                         help='input batch size for testing (default: 512)')
     parser.add_argument('--lr', type=float, default=0.01, metavar='LR',  # visda 0.01, office-31 3e-3
                         help='learning rate (default: 0.01)')
     parser.add_argument('--momentum', type=float, default=0.9, metavar='M',
-                        help='SGD momentum (default: 0.5)')
+                        help='SGD momentum')
     parser.add_argument('--optimizer', type=str, default='momentum', metavar='OP',
                         help='the name of optimizer')
     parser.add_argument('--seed', type=int, default=2021, metavar='S',
                         help='random seed (default: 1)')
-    parser.add_argument('--log-interval', type=int, default=1, metavar='N',
+    parser.add_argument('--log-interval', type=int, default=50, metavar='N',
                         help='how many batches to wait before logging training status')
     parser.add_argument('--save', type=str, default='save/', metavar='B',
                         help='model dir')
@@ -35,7 +35,7 @@ def init_main():
                         help='which resnet 18,50,101,152,200')
     parser.add_argument('--num_c', type=int, metavar='A', default=12,
                         help='number of sub-classifiers')
-    parser.add_argument('--max_sample', type=int, metavar='A', default=100,
+    parser.add_argument('--max_sample', type=int, metavar='A', default=-1,
                         help='sample size for debugging only, should be -1 to use the whole dataset')
     parser.add_argument('--src_max_epoch', type=int, default=10, metavar='N',
                         help='number of epochs of overall train (default: 100)')
