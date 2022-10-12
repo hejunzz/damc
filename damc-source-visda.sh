@@ -15,4 +15,4 @@ epsilon=0   # epsilon of label smoothing when smooth==1
 thresh=0.4  # threshold of worst case optimization, for visda we use 0.4
 modelep=0   # 0: from scratch, does not resume from a check-point
 
-python damc_source.py --model_ep $modelep --threshold $thresh --save $save --epsilon $epsilon --mul $mul --src_max_epoch $src_max_ep --smoothing $smooth --tgt_max_epoch $tgt_max_ep --src_alpha $alpha --bn_dim $bndim --gpuid $gpu --task $task --seed $seed --num_c $num_c --source $source --target $target
+python damc_source.py --model_ep $modelep --threshold $thresh --save $save --epsilon $epsilon --mul $mul --src_max_epoch $src_max_ep --smoothing $smooth --tgt_max_epoch $tgt_max_ep --src_alpha $alpha --bn_dim $bndim --gpuid $gpu --task $task --seed $seed --num_c $num_c --source $source
