@@ -18,5 +18,13 @@ even compete to source available UDA methods.
 
 ## Colab Jupyter notebook for SF UDA demonstration
 Please refer to https://sites.google.com/site/hejunzz/da
+
 The pre-trained source model can be downloaded from my Google drive. 
+
+damc.visda.train.cls12.smo0.0.3.10.pth: 
+https://drive.google.com/file/d/1lzMr8aab5hOvIpDTC9gLn_g8YCU3Dyy_/view?usp=sharing
+
+damc.visda.train.cls12.smo0.0.4.10.pth: 
 https://drive.google.com/file/d/1LX59Nq9gV-xqtBrV7szojDzFYubqI_nX/view?usp=sharing
+
+
