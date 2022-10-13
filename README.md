@@ -19,7 +19,7 @@ even compete to source available UDA methods.
 ## Colab Jupyter notebook for SF UDA demonstration
 Please refer to https://sites.google.com/site/hejunzz/da
 
-The pre-trained source model can be downloaded from my Google drive. 
+We provide the pre-trained 12-classifier source models for VisDA-2017. The pre-trained source models were trained by using $\alpha_s=0.3$ and $\alpha_s=0.4$. You can set either src_alpha=0.3 or src_alpha=0.4 to load the model respectively. The pre-trained models can be downloaded from my Google drive as follows. 
 
 damc.visda.train.cls12.smo0.0.3.10.pth: 
 https://drive.google.com/file/d/1lzMr8aab5hOvIpDTC9gLn_g8YCU3Dyy_/view?usp=sharing
